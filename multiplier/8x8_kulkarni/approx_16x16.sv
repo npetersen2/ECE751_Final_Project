@@ -7,11 +7,11 @@ module approx_16x16 (
 );
 
 logic [15:0] temp_y1, temp_y2, temp_y3, temp_y4;
-logic [10:0] cout;
+logic [23:0] cout;
 
-approx_8x8  mult_4 (.a(a[15:8]), .b(b[15:8]), .precise_en(precise_en), .y(temp_y4));
-approx_8x8  mult_3 (.a(a[7:0]) , .b(b[7:0]) , .precise_en(precise_en), .y(temp_y3));
-approx_8x8  mult_2 (.a(a[15:8]), .b(b[15:8]), .precise_en(precise_en), .y(temp_y2));
+precise_8x8 mult_4 (.a(a[15:8]), .b(b[15:8]), .y(temp_y4));
+approx_8x8  mult_3 (.a(a[7:0]) , .b(b[15:8]), .precise_en(precise_en), .y(temp_y3));
+approx_8x8  mult_2 (.a(a[15:8]), .b(b[7:0]) , .precise_en(precise_en), .y(temp_y2));
 approx_8x8  mult_1 (.a(a[7:0]) , .b(b[7:0]) , .precise_en(precise_en), .y(temp_y1));
 
 assign y[31]              = precise_en ? temp_y4[15] + cout[22] : temp_y4[15];
