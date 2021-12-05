@@ -1,8 +1,8 @@
 module testbench;
 
 reg             clk;
-logic [7:0]     a, b;
-logic [15:0]    y;
+logic [15:0]    a, b;
+logic [31:0]    y;
 int             counter_wrong, counter_correct, temp_mult, mcd;
 
 parameter PERIOD = 10;
@@ -11,7 +11,7 @@ clk_gen #(.PERIOD (PERIOD)) clkg (
     .clk    (clk)
 );
 
-approx_8x8 mult (
+approx_16x16 mult (
     .a          (a),
     .b          (b),
     .precise_en (1'b1),
@@ -29,7 +29,7 @@ end
 always @ (posedge clk) begin
     
     a <= (b == 2**8 - 1) ? a+1 : a;
-    b <= b+1;
+    b <= (b <= 2**8 - 1) ? b+1 : 0;
     
     $display("Output : %d, a = %d, b = %d", y, a, b);
     
