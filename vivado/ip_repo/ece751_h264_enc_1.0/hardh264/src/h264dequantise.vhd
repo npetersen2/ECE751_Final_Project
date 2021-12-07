@@ -72,6 +72,7 @@ architecture hw of h264dequantise is
 	--
 	signal zig : std_logic_vector(3 downto 0) := x"F";
 	signal qmf : std_logic_vector(5 downto 0) := (others=>'0');
+	signal qmf_t : std_logic_vector(15 downto 0) := (others=>'0');
 	signal qmfA : std_logic_vector(4 downto 0) := (others=>'0');
 	signal qmfB : std_logic_vector(4 downto 0) := (others=>'0');
 	signal qmfC : std_logic_vector(4 downto 0) := (others=>'0');
@@ -81,7 +82,20 @@ architecture hw of h264dequantise is
 	signal dcc2 : std_logic := '0';
 	signal z1 : std_logic_vector(15 downto 0) := (others=>'0');
 	signal w2 : std_logic_vector(22 downto 0) := (others=>'0');
+	signal w2_approx : std_logic_vector(31 downto 0) := (others=>'0');
+	signal da :std_logic := '0'; 
 	--
+
+	component approx_16x16 IS
+	PORT
+	(
+		a		: in STD_LOGIC_VECTOR(15 downto 0);	
+		b		: in STD_LOGIC_VECTOR(15 downto 0);	
+		precise_en	: in STD_LOGIC;
+		y		: out STD_LOGIC_VECTOR(31 downto 0)
+	);
+	end component;
+
 begin
 	--quantisation multiplier factors as per std
 	--we need to multiply by qmf and shift by QP/6
@@ -107,6 +121,18 @@ begin
 		CONV_STD_LOGIC_VECTOR(20,5) when ('0'&QP)=4 or ('0'&QP)=10 or ('0'&QP)=16 or ('0'&QP)=22 or ('0'&QP)=28 or ('0'&QP)=34 or ('0'&QP)=40 or ('0'&QP)=46 else
 		CONV_STD_LOGIC_VECTOR(23,5);
 	--
+
+	qmf_t <= "0000000000"&qmf;
+
+	approx_mult : approx_16x16
+	port map
+	(
+		a			=> z1,
+		b			=> qmf_t,
+		precise_en	=> da,
+		y			=> w2_approx
+	);
+
 process(CLK)
 begin
 	if rising_edge(CLK) then
@@ -146,7 +172,8 @@ begin
 			z1 <= ZIN;	--data ready for scaling
 		end if;
 		if enab1='1' then
-			w2 <= z1 * ('0'&qmf);		-- quantise
+			w2 <= w2_approx;		-- quantise
+			--w2 <= z1 * ('0'&qmf);		-- quantise
 		end if;
 		if enab2='1' then
 			--here apply ">>1" to undo the x2 above, unless DCC where ">>1" needed
