@@ -1,0 +1,67 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Nov 30 10:22:04 2021
+| Host         : jeff running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_zynq_ece751_h264_enc_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of base_zynq_ece751_h264_enc_0_0 (xilinx.com:user:ece751_h264_enc:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'base_zynq_ece751_h264_enc_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'intra4x4_READYI'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Tue Nov 30 10:08:03 2021
+| Host         : jeff running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'base_zynq_ece751_h264_enc_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of base_zynq_ece751_h264_enc_0_0 (xilinx.com:user:ece751_h264_enc:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'base_zynq_ece751_h264_enc_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'intra8x8cc_readyi'
+
+-Upgrade has added port 'tobytes_BYTE'
+
+-Upgrade has added port 'tobytes_DONE'
+
+-Upgrade has added port 'tobytes_STROBE'
+
+-Upgrade has added port 'xbuffer_DONE'
+
+

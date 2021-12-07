@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec  7 09:41:43 2021
+# Process ID: 22072
+# Current directory: C:/Users/Nathan/Documents/GitHub/ECE751_Final_Project/vivado/project_zedboard_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20092 C:\Users\Nathan\Documents\GitHub\ECE751_Final_Project\vivado\project_zedboard_1\project_zedboard_1.xpr
+# Log file: C:/Users/Nathan/Documents/GitHub/ECE751_Final_Project/vivado/project_zedboard_1/vivado.log
+# Journal file: C:/Users/Nathan/Documents/GitHub/ECE751_Final_Project/vivado/project_zedboard_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Nathan/Documents/GitHub/ECE751_Final_Project/vivado/project_zedboard_1/project_zedboard_1.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Nathan/Documents/GitHub/ECE751_Final_Project/vivado/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/base_zynq.bd}
+regenerate_bd_layout
+save_bd_design

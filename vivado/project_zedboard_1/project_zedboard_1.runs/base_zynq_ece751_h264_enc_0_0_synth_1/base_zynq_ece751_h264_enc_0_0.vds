@@ -1,0 +1,1157 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Nov 30 10:22:28 2021
+# Process ID: 1580
+# Current directory: C:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.runs/base_zynq_ece751_h264_enc_0_0_synth_1
+# Command line: vivado.exe -log base_zynq_ece751_h264_enc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_zynq_ece751_h264_enc_0_0.tcl
+# Log file: C:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.runs/base_zynq_ece751_h264_enc_0_0_synth_1/base_zynq_ece751_h264_enc_0_0.vds
+# Journal file: C:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.runs/base_zynq_ece751_h264_enc_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_zynq_ece751_h264_enc_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/ip_repo/ece751_h264_enc_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.cache/ip 
+Command: synth_design -top base_zynq_ece751_h264_enc_0_0 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 38496 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 718.359 ; gain = 178.242
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'base_zynq_ece751_h264_enc_0_0' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ip/base_zynq_ece751_h264_enc_0_0/synth/base_zynq_ece751_h264_enc_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ece751_h264_enc_v1_0' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hdl/ece751_h264_enc_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ece751_h264_enc_v1_0_S00_AXI' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hdl/ece751_h264_enc_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hdl/ece751_h264_enc_v1_0_S00_AXI.v:263]
+INFO: [Synth 8-226] default block is never used [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hdl/ece751_h264_enc_v1_0_S00_AXI.v:500]
+INFO: [Synth 8-638] synthesizing module 'h264topskeleton' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:107]
+	Parameter IMGWIDTH bound to: 1920 - type: integer 
+	Parameter IMGHEIGHT bound to: 1080 - type: integer 
+	Parameter IWBITS bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'h264intra4x4' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264intra4x4.vhd:88' bound to instance 'intra4x4' of component 'h264intra4x4' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:221]
+INFO: [Synth 8-638] synthesizing module 'h264intra4x4' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264intra4x4.vhd:123]
+INFO: [Synth 8-256] done synthesizing module 'h264intra4x4' (1#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264intra4x4.vhd:123]
+INFO: [Synth 8-3491] module 'h264intra8x8cc' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264intra8x8cc.vhd:96' bound to instance 'intra8x8cc' of component 'h264intra8x8cc' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:258]
+INFO: [Synth 8-638] synthesizing module 'h264intra8x8cc' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264intra8x8cc.vhd:128]
+INFO: [Synth 8-256] done synthesizing module 'h264intra8x8cc' (2#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264intra8x8cc.vhd:128]
+INFO: [Synth 8-3491] module 'h264header' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264header.vhd:118' bound to instance 'header' of component 'h264header' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'h264header' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264header.vhd:146]
+INFO: [Synth 8-256] done synthesizing module 'h264header' (3#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264header.vhd:146]
+INFO: [Synth 8-3491] module 'h264coretransform' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264coretransform.vhd:60' bound to instance 'coretransform' of component 'h264coretransform' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:316]
+INFO: [Synth 8-638] synthesizing module 'h264coretransform' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264coretransform.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'h264coretransform' (4#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264coretransform.vhd:71]
+	Parameter TOGETHER bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'h264dctransform' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:45' bound to instance 'dctransform' of component 'h264dctransform' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:330]
+INFO: [Synth 8-638] synthesizing module 'h264dctransform' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:61]
+	Parameter TOGETHER bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'h264dctransform' (5#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:61]
+INFO: [Synth 8-3491] module 'h264quantise' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:52' bound to instance 'quantise' of component 'h264quantise' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:344]
+INFO: [Synth 8-638] synthesizing module 'h264quantise' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:65]
+WARNING: [Synth 8-6014] Unused sequential element rr_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:150]
+INFO: [Synth 8-256] done synthesizing module 'h264quantise' (6#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:65]
+	Parameter TOGETHER bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'h264dctransform' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:45' bound to instance 'invdctransform' of component 'h264dctransform' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'h264dctransform__parameterized1' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:61]
+	Parameter TOGETHER bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'h264dctransform__parameterized1' (6#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:61]
+	Parameter LASTADVANCE bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'h264dequantise' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dequantise.vhd:54' bound to instance 'dequantise' of component 'h264dequantise' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:373]
+INFO: [Synth 8-638] synthesizing module 'h264dequantise' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dequantise.vhd:71]
+	Parameter LASTADVANCE bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'h264dequantise' (7#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dequantise.vhd:71]
+INFO: [Synth 8-3491] module 'h264invtransform' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:57' bound to instance 'invtransform' of component 'h264invtransform' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:389]
+INFO: [Synth 8-638] synthesizing module 'h264invtransform' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:67]
+WARNING: [Synth 8-6014] Unused sequential element d30_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:169]
+WARNING: [Synth 8-6014] Unused sequential element d20_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:189]
+WARNING: [Synth 8-6014] Unused sequential element d10_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:199]
+WARNING: [Synth 8-6014] Unused sequential element d00_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:211]
+WARNING: [Synth 8-6014] Unused sequential element h0_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:229]
+WARNING: [Synth 8-6014] Unused sequential element h1_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:230]
+WARNING: [Synth 8-6014] Unused sequential element h2_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:231]
+WARNING: [Synth 8-6014] Unused sequential element h3_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:232]
+WARNING: [Synth 8-6014] Unused sequential element h03_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:274]
+WARNING: [Synth 8-6014] Unused sequential element hx0_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:301]
+WARNING: [Synth 8-6014] Unused sequential element hx1_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:302]
+WARNING: [Synth 8-6014] Unused sequential element hx2_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:303]
+WARNING: [Synth 8-6014] Unused sequential element hx3_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:304]
+INFO: [Synth 8-256] done synthesizing module 'h264invtransform' (8#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:67]
+INFO: [Synth 8-3491] module 'h264recon' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264recon.vhd:44' bound to instance 'recon' of component 'h264recon' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:398]
+INFO: [Synth 8-638] synthesizing module 'h264recon' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264recon.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'h264recon' (9#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264recon.vhd:63]
+INFO: [Synth 8-3491] module 'h264buffer' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264buffer.vhd:73' bound to instance 'xbuffer' of component 'h264buffer' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:414]
+INFO: [Synth 8-638] synthesizing module 'h264buffer' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264buffer.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element addr_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264buffer.vhd:157]
+INFO: [Synth 8-256] done synthesizing module 'h264buffer' (10#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264buffer.vhd:100]
+INFO: [Synth 8-3491] module 'h264cavlc' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264cavlc.vhd:94' bound to instance 'cavlc' of component 'h264cavlc' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:441]
+INFO: [Synth 8-638] synthesizing module 'h264cavlc' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264cavlc.vhd:112]
+WARNING: [Synth 8-6014] Unused sequential element tmpindex_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264cavlc.vhd:1109]
+WARNING: [Synth 8-6014] Unused sequential element coeff_reg was removed.  [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264cavlc.vhd:1195]
+INFO: [Synth 8-256] done synthesizing module 'h264cavlc' (11#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264cavlc.vhd:112]
+INFO: [Synth 8-3491] module 'h264tobytes' declared at 'c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264tobytes.vhd:57' bound to instance 'tobytes' of component 'h264tobytes' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:458]
+INFO: [Synth 8-638] synthesizing module 'h264tobytes' [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264tobytes.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'h264tobytes' (12#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264tobytes.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'h264topskeleton' (13#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264topskeleton.vhd:107]
+INFO: [Synth 8-6155] done synthesizing module 'ece751_h264_enc_v1_0_S00_AXI' (14#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hdl/ece751_h264_enc_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ece751_h264_enc_v1_0' (15#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hdl/ece751_h264_enc_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'base_zynq_ece751_h264_enc_0_0' (16#1) [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ip/base_zynq_ece751_h264_enc_0_0/synth/base_zynq_ece751_h264_enc_0_0.v:57]
+WARNING: [Synth 8-3331] design h264header has unconnected port PTYPE[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port PTYPE[0]
+WARNING: [Synth 8-3331] design h264header has unconnected port PSUBTYPE[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port PSUBTYPE[0]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[11]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[10]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[9]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[8]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[7]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[6]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[5]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[4]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[3]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[2]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[0]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[11]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[10]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[9]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[8]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[7]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[6]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[5]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[4]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[3]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[2]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[0]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 879.906 ; gain = 339.789
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 879.906 ; gain = 339.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 879.906 ; gain = 339.789
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 972.625 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.190 . Memory (MB): peak = 975.633 ; gain = 3.008
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 975.633 ; gain = 435.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 975.633 ; gain = 435.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 975.633 ; gain = 435.516
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264intra8x8cc.vhd:189]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264coretransform.vhd:247]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264coretransform.vhd:247]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:100]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:100]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264quantise.vhd:152]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:100]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dctransform.vhd:100]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w2_reg' and it is trimmed from '23' to '17' bits. [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264dequantise.vhd:149]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:156]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264invtransform.vhd:218]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.srcs/sources_1/bd/base_zynq/ipshared/a781/hardh264/src/h264cavlc.vhd:1155]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 975.633 ; gain = 435.516
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 16    
+	   2 Input     16 Bit       Adders := 9     
+	   3 Input     14 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   5 Input     13 Bit       Adders := 1     
+	   3 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
+	   5 Input     12 Bit       Adders := 3     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 12    
+	   3 Input     11 Bit       Adders := 2     
+	   4 Input     10 Bit       Adders := 4     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 6     
+	   3 Input      9 Bit       Adders := 16    
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 13    
+	   2 Input      6 Bit       Adders := 6     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 16    
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 28    
+	   2 Input      3 Bit       Adders := 10    
+	   2 Input      2 Bit       Adders := 11    
++---Registers : 
+	               40 Bit    Registers := 1     
+	               36 Bit    Registers := 2     
+	               32 Bit    Registers := 26    
+	               25 Bit    Registers := 3     
+	               16 Bit    Registers := 48    
+	               15 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 5     
+	               12 Bit    Registers := 25    
+	               11 Bit    Registers := 5     
+	               10 Bit    Registers := 27    
+	                9 Bit    Registers := 18    
+	                8 Bit    Registers := 17    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 7     
+	                5 Bit    Registers := 18    
+	                4 Bit    Registers := 24    
+	                3 Bit    Registers := 11    
+	                2 Bit    Registers := 22    
+	                1 Bit    Registers := 104   
++---RAMs : 
+	              10K Bit         RAMs := 1     
+	               6K Bit         RAMs := 1     
+	               2K Bit         RAMs := 1     
+	             1024 Bit         RAMs := 1     
+	               1K Bit         RAMs := 1     
+	              384 Bit         RAMs := 1     
+	              320 Bit         RAMs := 1     
+	              256 Bit         RAMs := 2     
+	              128 Bit         RAMs := 3     
+	               80 Bit         RAMs := 1     
+	               40 Bit         RAMs := 1     
+	               16 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 20    
+	  16 Input     32 Bit        Muxes := 16    
+	   3 Input     25 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 11    
+	   4 Input     25 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 54    
+	   4 Input     16 Bit        Muxes := 5     
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 7     
+	   6 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
+	   6 Input     13 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 4     
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 6     
+	   4 Input     11 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 15    
+	   4 Input      8 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	   9 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	 262 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 23    
+	   6 Input      5 Bit        Muxes := 3     
+	   3 Input      5 Bit        Muxes := 2     
+	 202 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 28    
+	   6 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 2     
+	  12 Input      4 Bit        Muxes := 1     
+	 142 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 21    
+	   3 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	  17 Input      3 Bit        Muxes := 1     
+	  28 Input      3 Bit        Muxes := 1     
+	 121 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 22    
+	   3 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 157   
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module h264intra4x4 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input     12 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 2     
+	   3 Input     11 Bit       Adders := 1     
+	   4 Input     10 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 12    
+	   2 Input      8 Bit       Adders := 12    
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 12    
+	                8 Bit    Registers := 14    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	               2K Bit         RAMs := 1     
+	              128 Bit         RAMs := 1     
+	               16 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 12    
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 1     
+Module h264intra8x8cc 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input     13 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 2     
+	   3 Input     11 Bit       Adders := 1     
+	   4 Input     10 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               36 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 8     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+	              128 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   6 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 1     
+Module h264header 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---RAMs : 
+	              256 Bit         RAMs := 1     
+	               80 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 23    
+	   2 Input     15 Bit        Muxes := 1     
+	   3 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 10    
+	   2 Input      4 Bit        Muxes := 8     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 42    
+	   4 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module h264coretransform 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     14 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   3 Input     13 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
+	   3 Input     12 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 2     
+	   3 Input     10 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	               13 Bit    Registers := 4     
+	               12 Bit    Registers := 20    
+	               10 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 5     
+	   4 Input     12 Bit        Muxes := 4     
+Module h264dctransform 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 2     
+Module h264quantise 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   6 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   6 Input     13 Bit        Muxes := 2     
+	   3 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 3     
+Module h264dctransform__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     16 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 2     
+Module h264dequantise 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   9 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   6 Input      5 Bit        Muxes := 3     
+Module h264invtransform 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 6     
+	   3 Input     16 Bit       Adders := 10    
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               16 Bit    Registers := 36    
+	               10 Bit    Registers := 15    
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     16 Bit        Muxes := 5     
+	   2 Input     16 Bit        Muxes := 19    
+	   4 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+Module h264recon 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	              256 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 1     
+Module h264buffer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               12 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 13    
++---RAMs : 
+	               6K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 4     
+	   2 Input      4 Bit        Muxes := 10    
+	   2 Input      3 Bit        Muxes := 7     
+	   2 Input      2 Bit        Muxes := 6     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 43    
+	   4 Input      1 Bit        Muxes := 2     
+Module h264cavlc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 8     
+	   2 Input      5 Bit       Adders := 12    
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 5     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	                5 Bit    Registers := 12    
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 15    
++---RAMs : 
+	              384 Bit         RAMs := 1     
+	              128 Bit         RAMs := 1     
++---Muxes : 
+	   3 Input     25 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 9     
+	   4 Input     25 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 2     
+	 262 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 6     
+	   3 Input      5 Bit        Muxes := 2     
+	 202 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   4 Input      4 Bit        Muxes := 1     
+	  12 Input      4 Bit        Muxes := 1     
+	 142 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 9     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	  17 Input      3 Bit        Muxes := 1     
+	  28 Input      3 Bit        Muxes := 1     
+	 121 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 37    
+	   5 Input      1 Bit        Muxes := 3     
+Module h264tobytes 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
+	   3 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	               1K Bit         RAMs := 1     
+	              320 Bit         RAMs := 1     
++---Muxes : 
+	   4 Input     11 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module h264topskeleton 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
++---RAMs : 
+	              10K Bit         RAMs := 1     
+	               40 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     36 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     25 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+Module ece751_h264_enc_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 17    
+	                6 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 16    
+	  16 Input     32 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP zr_reg, operation Mode is: (A2*B2)'.
+DSP Report: register zr_reg is absorbed into DSP zr_reg.
+DSP Report: register yn1_reg is absorbed into DSP zr_reg.
+DSP Report: register zr_reg is absorbed into DSP zr_reg.
+DSP Report: operator multOp is absorbed into DSP zr_reg.
+DSP Report: Generating DSP w2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register w2_reg is absorbed into DSP w2_reg.
+DSP Report: register z1_reg is absorbed into DSP w2_reg.
+DSP Report: register w2_reg is absorbed into DSP w2_reg.
+DSP Report: operator multOp is absorbed into DSP w2_reg.
+WARNING: [Synth 8-3331] design h264header has unconnected port PTYPE[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port PTYPE[0]
+WARNING: [Synth 8-3331] design h264header has unconnected port PSUBTYPE[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port PSUBTYPE[0]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[11]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[10]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[9]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[8]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[7]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[6]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[5]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[4]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[3]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[2]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDX[0]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[11]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[10]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[9]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[8]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[7]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[6]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[5]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[4]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[3]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[2]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[1]
+WARNING: [Synth 8-3331] design h264header has unconnected port MVDY[0]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design ece751_h264_enc_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM nintop_reg to conserve power
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[11]' (FD) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[12]' (FD) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[13]' (FD) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[14]' (FD) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/invdctransform/xxii_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[4]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[5]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[2]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[3]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[0]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[1]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[11]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[8]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[9]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[6]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[7]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[16]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[17]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[14]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[15]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[12]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[13]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[22]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[23]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[20]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[21]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[18]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[19]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/BASEO_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ffx0_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ffx0_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ffx2_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ffx2_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff00_reg[11]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff00_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff02_reg[11]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff02_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff10_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff10_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff12_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff12_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff20_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff20_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff22_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/coretransform/ff22_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra4x4/i_12/left0[-1111111111]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra4x4/i_12/left0[-1111111110]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /intra4x4/i_12/\left0[-1111111110] )
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/dctransform/xxii_reg[12]' (FD) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/dctransform/xxii_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/dctransform/xxii_reg[13]' (FD) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/dctransform/xxii_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/dctransform/xxii_reg[14]' (FD) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/dctransform/xxii_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/xbuffer/NY_reg[2]' (FDSE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/xbuffer/NX_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/fcount_reg[3]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/fcount_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/fcount_reg[1]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/fcount_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /header/\fcount_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/cavlc/signcoeff0__1' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/cavlc/signcoeff0__0'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /cavlc/signcoeff0__0)
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/cmodei_reg[1]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/cmodei_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /header/\cmodei_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[14]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[15]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[13]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[12]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[11]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[10]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[9]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[8]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/uevp1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/ece751_h264_enc_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/ece751_h264_enc_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (left0[-1111111110]) is unused and will be removed from module h264intra4x4.
+WARNING: [Synth 8-3332] Sequential element (signcoeff0__0) is unused and will be removed from module h264cavlc.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /header/\uevp1_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-----------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|h264intra4x4:    | pix_reg    | 64 x 32(READ_FIRST)    | W |   | 64 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|h264intra8x8cc:  | pix_reg    | 32 x 32(READ_FIRST)    | W |   | 32 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|h264buffer:      | buf_reg    | 512 x 12(READ_FIRST)   | W |   | 512 x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|h264topskeleton: | nintop_reg | 2 K x 5(READ_FIRST)    | W |   | 2 K x 5(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++-----------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++----------------------------------------------------------------+----------------+-----------+----------------------+-----------------------------------+
+|Module Name                                                     | RTL Object     | Inference | Size (Depth x Width) | Primitives                        | 
++----------------------------------------------------------------+----------------+-----------+----------------------+-----------------------------------+
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /intra4x4   | pixleft_reg    | Implied   | 16 x 8               | RAM32M x 10                       | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /intra4x4   | lmode_reg      | Implied   | 4 x 2                | RAM16X1S x 4                      | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /intra8x8cc | pixleft_reg    | Implied   | 16 x 8               | RAM32M x 8                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /header     | abuf_reg       | Implied   | 16 x 16              | RAM32M x 3                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /header     | abufc_reg      | Implied   | 16 x 5               | RAM32M x 1                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /recon      | basevec_reg    | Implied   | 8 x 32               | RAM32M x 6                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /cavlc      | runbarray_reg  | Implied   | 32 x 4               | RAM32M x 2                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /cavlc      | coeffarray_reg | Implied   | 32 x 12              | RAM32M x 4                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /tobytes    | aVL_reg        | Implied   | 64 x 5               | RAM64M x 2                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /tobytes    | aVE_reg        | Implied   | 64 x 25              | RAM64M x 9                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | toppix_reg     | Implied   | 2 K x 32             | RAM128X1S x 32  RAM256X1S x 224   | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | topmode_reg    | Implied   | 2 K x 4              | RAM128X1S x 4  RAM256X1S x 28     | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | toppixcc_reg   | Implied   | 2 K x 32             | RAM128X1S x 32  RAM256X1S x 224   | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | ninleft_reg    | Implied   | 8 x 5                | RAM16X1S x 5                      | 
++----------------------------------------------------------------+----------------+-----------+----------------------+-----------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping  Report (see note below)
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|h264quantise   | (A2*B2)'    | 16     | 15     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|h264dequantise | (A2*B2)'    | 16     | 7      | -      | -      | 23     | 1    | 1    | -    | -    | -     | 1    | 0    | 
++---------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra4x4/i_25/pix_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/i_21/pix_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/xbuffer/i_17/buf_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/i_4/nintop_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:01:48 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:01:49 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-----------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|h264intra4x4:    | pix_reg    | 64 x 32(READ_FIRST)    | W |   | 64 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|h264intra8x8cc:  | pix_reg    | 32 x 32(READ_FIRST)    | W |   | 32 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|h264buffer:      | buf_reg    | 512 x 12(READ_FIRST)   | W |   | 512 x 12(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|h264topskeleton: | nintop_reg | 2 K x 5(READ_FIRST)    | W |   | 2 K x 5(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++-----------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++----------------------------------------------------------------+----------------+-----------+----------------------+-----------------------------------+
+|Module Name                                                     | RTL Object     | Inference | Size (Depth x Width) | Primitives                        | 
++----------------------------------------------------------------+----------------+-----------+----------------------+-----------------------------------+
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /intra4x4   | pixleft_reg    | Implied   | 16 x 8               | RAM32M x 10                       | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /intra4x4   | lmode_reg      | Implied   | 4 x 2                | RAM16X1S x 4                      | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /intra8x8cc | pixleft_reg    | Implied   | 16 x 8               | RAM32M x 8                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /header     | abuf_reg       | Implied   | 16 x 16              | RAM32M x 3                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /header     | abufc_reg      | Implied   | 16 x 5               | RAM32M x 1                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /recon      | basevec_reg    | Implied   | 8 x 32               | RAM32M x 6                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /cavlc      | runbarray_reg  | Implied   | 32 x 4               | RAM32M x 2                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /cavlc      | coeffarray_reg | Implied   | 32 x 12              | RAM32M x 4                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /tobytes    | aVL_reg        | Implied   | 64 x 5               | RAM64M x 2                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc /tobytes    | aVE_reg        | Implied   | 64 x 25              | RAM64M x 9                        | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | toppix_reg     | Implied   | 2 K x 32             | RAM128X1S x 32  RAM256X1S x 224   | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | topmode_reg    | Implied   | 2 K x 4              | RAM128X1S x 4  RAM256X1S x 28     | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | toppixcc_reg   | Implied   | 2 K x 32             | RAM128X1S x 32  RAM256X1S x 224   | 
+|\inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc             | ninleft_reg    | Implied   | 8 x 5                | RAM16X1S x 5                      | 
++----------------------------------------------------------------+----------------+-----------+----------------------+-----------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg_rep[0]' (FDRE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg_rep[1]' (FDRE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg_rep[2]' (FDRE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg_rep[3]' (FDRE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/header/emit_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg_rep[0]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg_rep[1]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg_rep[2]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg_rep[3]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg_rep[4]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg_rep[5]' (FDE) to 'inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/tobytes/aout_reg[5]'
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra4x4/pix_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/intra8x8cc/pix_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/xbuffer/buf_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/nintop_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:50 ; elapsed = 00:01:52 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:01:54 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:01:54 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:53 ; elapsed = 00:01:54 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:53 ; elapsed = 00:01:54 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:53 ; elapsed = 00:01:54 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:53 ; elapsed = 00:01:55 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------------------+----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name                   | RTL Name                                                                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------------------+----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|base_zynq_ece751_h264_enc_0_0 | inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/dctransform/enablei_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|base_zynq_ece751_h264_enc_0_0 | inst/ece751_h264_enc_v1_0_S00_AXI_inst/my_h264_enc/quantise/DCCO_reg       | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------------------------+----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |   286|
+|2     |DSP48E1_1  |     2|
+|3     |LUT1       |    61|
+|4     |LUT2       |   652|
+|5     |LUT3       |   460|
+|6     |LUT4       |   739|
+|7     |LUT5       |   690|
+|8     |LUT6       |  1712|
+|9     |MUXF7      |    66|
+|10    |MUXF8      |    32|
+|11    |RAM128X1S  |    68|
+|12    |RAM16X1S   |     9|
+|13    |RAM256X1S  |   476|
+|14    |RAM32M     |    34|
+|15    |RAM64M     |    11|
+|16    |RAMB18E1   |     2|
+|17    |RAMB18E1_1 |     1|
+|18    |RAMB18E1_2 |     1|
+|19    |SRL16E     |     2|
+|20    |FDRE       |  3159|
+|21    |FDSE       |    87|
++------+-----------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+--------------------------------+------+
+|      |Instance                              |Module                          |Cells |
++------+--------------------------------------+--------------------------------+------+
+|1     |top                                   |                                |  8550|
+|2     |  inst                                |ece751_h264_enc_v1_0            |  8550|
+|3     |    ece751_h264_enc_v1_0_S00_AXI_inst |ece751_h264_enc_v1_0_S00_AXI    |  8543|
+|4     |      my_h264_enc                     |h264topskeleton                 |  7623|
+|5     |        cavlc                         |h264cavlc                       |  1127|
+|6     |        coretransform                 |h264coretransform               |   628|
+|7     |        dctransform                   |h264dctransform                 |   266|
+|8     |        dequantise                    |h264dequantise                  |   109|
+|9     |        header                        |h264header                      |   206|
+|10    |        intra4x4                      |h264intra4x4                    |  1355|
+|11    |        intra8x8cc                    |h264intra8x8cc                  |   600|
+|12    |        invdctransform                |h264dctransform__parameterized1 |   259|
+|13    |        invtransform                  |h264invtransform                |  1610|
+|14    |        quantise                      |h264quantise                    |   162|
+|15    |        recon                         |h264recon                       |   197|
+|16    |        tobytes                       |h264tobytes                     |   184|
+|17    |        xbuffer                       |h264buffer                      |   154|
++------+--------------------------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:53 ; elapsed = 00:01:55 . Memory (MB): peak = 1239.262 ; gain = 699.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:37 ; elapsed = 00:01:52 . Memory (MB): peak = 1239.262 ; gain = 603.418
+Synthesis Optimization Complete : Time (s): cpu = 00:01:53 ; elapsed = 00:01:55 . Memory (MB): peak = 1239.262 ; gain = 699.145
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 988 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1239.262 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 598 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 68 instances
+  RAM16X1S => RAM32X1S (RAMS32): 9 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 476 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 34 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 11 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+183 Infos, 90 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:02 . Memory (MB): peak = 1239.262 ; gain = 959.078
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1239.262 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.runs/base_zynq_ece751_h264_enc_0_0_synth_1/base_zynq_ece751_h264_enc_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_zynq_ece751_h264_enc_0_0, cache-ID = 43b4e807743b00b6
+INFO: [Coretcl 2-1174] Renamed 16 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1239.262 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Nathan/Documents/GitHub/AMDC-Firmware3/project_zedboard_1/project_zedboard_1.runs/base_zynq_ece751_h264_enc_0_0_synth_1/base_zynq_ece751_h264_enc_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file base_zynq_ece751_h264_enc_0_0_utilization_synth.rpt -pb base_zynq_ece751_h264_enc_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 30 10:24:38 2021...
