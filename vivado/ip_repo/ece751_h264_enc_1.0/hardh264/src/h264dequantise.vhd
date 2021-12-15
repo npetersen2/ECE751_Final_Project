@@ -172,7 +172,7 @@ begin
 			z1 <= ZIN;	--data ready for scaling
 		end if;
 		if enab1='1' then
-			w2 <= w2_approx;		-- quantise
+			w2 <= w2_approx(22 downto 0);		-- quantise
 			--w2 <= z1 * ('0'&qmf);		-- quantise
 		end if;
 		if enab2='1' then

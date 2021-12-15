@@ -2,3 +2,6 @@ work/
 rtl_work/
 transcript
 *.wlf
+*.ppm
+*.yuv
+*.y4m

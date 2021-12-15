@@ -167,7 +167,7 @@ begin
 		end if;
 		if enab1='1' then
 			--zr <= yn1 * ('0'&qmf);		--quantise
-			zr <= zr_approx;		--quantise
+			zr <= zr_approx(30 downto 0);		--quantise
 		end if;
 		--two bits of rounding (and leading zero)
 		--rr := b"010";			--simple round-to-middle
