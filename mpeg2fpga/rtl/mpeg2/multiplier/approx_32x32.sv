@@ -3,7 +3,7 @@ module approx_32x32 (
     input wire clk_en,
     input wire rst,
     
-    output logic [63:0] y,
+    output logic [63:0] product,
 
     input logic [31:0] a,
     input logic [31:0] b,
@@ -12,6 +12,7 @@ module approx_32x32 (
 );
 
 logic [31:0] temp_y1, temp_y2, temp_y3, temp_y4;
+logic [63:0] y;
 logic [46:0] cout;
 
 precise_16x16 mult_4 (.a(a[31:16]), .b(b[31:16]), .y(temp_y4));
@@ -86,6 +87,11 @@ assign y[3]  = temp_y1[3];
 assign y[2]  = temp_y1[2];
 assign y[1]  = temp_y1[1];
 assign y[0]  = temp_y1[0];
+
+always @(posedge clk)
+    if (~rst) product <= 64'b0;
+    else if (clk_en) product <= y;
+    else product <= product;
 
 endmodule
 
