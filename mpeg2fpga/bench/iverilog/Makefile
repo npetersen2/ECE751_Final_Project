@@ -52,6 +52,8 @@ SRCS = \
   ../../rtl/mpeg2/synchronizer.v \
   ../../rtl/mpeg2/probe.v \
   ../../rtl/mpeg2/xfifo_sc.v \
+  ../../rtl/mpeg2/multiplier/approx_32x32.sv \
+  ../../rtl/mpeg2/multiplier/precise_16x16.sv \
   ../../rtl/mpeg2/multiplier/approx_16x16.sv \
   ../../rtl/mpeg2/multiplier/approx_2x2.sv \
   ../../rtl/mpeg2/multiplier/approx_4x4.sv \

@@ -7,3 +7,5 @@
  `include "approx_8x8.sv"
  `include "precise_8x8.sv"
  `include "approx_16x16.sv"
+ `include "precise_16x16.sv"
+ `include "approx_32x32.sv"

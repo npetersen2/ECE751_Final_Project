@@ -1,8 +1,8 @@
 module testbench;
 
 reg             clk;
-logic [15:0]    a, b;
-logic [31:0]    y;
+logic [31:0]    a, b;
+logic [63:0]    y;
 int             counter_wrong, counter_correct, temp_mult, mcd;
 
 parameter PERIOD = 10;
@@ -11,7 +11,7 @@ clk_gen #(.PERIOD (PERIOD)) clkg (
     .clk    (clk)
 );
 
-approx_16x16 mult (
+approx_32x32 mult (
     .a          (a),
     .b          (b),
     .precise_en (1'b1),
