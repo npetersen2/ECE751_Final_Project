@@ -1080,9 +1080,9 @@ module idct1d_col (clk, clk_en, rst, dta_in, dta_in_valid, dta_out, dta_out_vali
     else if (clk_en) prod0 <= prod0_delayed;
     else prod0 <= prod0;
 
-  approx_32x32 mult_prod1(clk, clk_en, rst, prod1, cos1, x1, 1'b1);      /* prod1 <= cos1 * x1; */
-  approx_32x32 mult_prod2(clk, clk_en, rst, prod2, cos2, x2, 1'b1);      /* prod2 <= cos2 * x2; */
-  approx_32x32 mult_prod3(clk, clk_en, rst, prod3, cos3, x3, 1'b1);      /* prod3 <= cos3 * x3; */
+  approx_22x16_signed mult_prod1(clk, clk_en, rst, prod1, cos1, x1, 1'b1);      /* prod1 <= cos1 * x1; */
+  approx_22x16_signed mult_prod2(clk, clk_en, rst, prod2, cos2, x2, 1'b1);      /* prod2 <= cos2 * x2; */
+  approx_22x16_signed mult_prod3(clk, clk_en, rst, prod3, cos3, x3, 1'b1);      /* prod3 <= cos3 * x3; */
 
   always @(posedge clk)                                         /* prod4 <= cos4 * x4. Uses shifts, avoids a multipier. */
     if (~rst) prod4_delayed <= 'sd0;
@@ -1105,9 +1105,9 @@ module idct1d_col (clk, clk_en, rst, dta_in, dta_in_valid, dta_out, dta_out_vali
     else if (clk_en) prod4 <= prod4_delayed;
     else prod4 <= prod4;
 
-  approx_32x32 mult_prod5(clk, clk_en, rst, prod5, cos5, x5, 1'b1);      /* prod5 <= cos5 * x5; */
-  approx_32x32 mult_prod6(clk, clk_en, rst, prod6, cos6, x6, 1'b1);      /* prod6 <= cos6 * x6; */
-  approx_32x32 mult_prod7(clk, clk_en, rst, prod7, cos7, x7, 1'b1);      /* prod7 <= cos7 * x7; */
+  approx_22x16_signed mult_prod5(clk, clk_en, rst, prod5, cos5, x5, 1'b1);      /* prod5 <= cos5 * x5; */
+  approx_22x16_signed mult_prod6(clk, clk_en, rst, prod6, cos6, x6, 1'b1);      /* prod6 <= cos6 * x6; */
+  approx_22x16_signed mult_prod7(clk, clk_en, rst, prod7, cos7, x7, 1'b1);      /* prod7 <= cos7 * x7; */
   
   always @(posedge clk)
     if (~rst)
