@@ -1226,7 +1226,7 @@ module idct1d_col (clk, clk_en, rst, dta_in, dta_in_valid, dta_out, dta_out_vali
     else if (clk_en) dta_out <=  y >>> dta_shift;
     else dta_out <= dta_out;
 
-`ifdef DEBUG_IDCT_1D
+`ifdef DEBUG_IDCT_1C
   always @(posedge clk)
     begin
       $strobe("%m\toffset: %d", offset);

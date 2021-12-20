@@ -1,8 +1,9 @@
 module testbench;
 
 reg             clk;
-logic [31:0]    a, b;
-logic [63:0]    y;
+logic signed [15:0]    a;
+logic signed [21:0]    b;
+logic signed [37:0]    y;
 int             counter_wrong, counter_correct, temp_mult, mcd;
 
 parameter PERIOD = 10;
@@ -11,19 +12,19 @@ clk_gen #(.PERIOD (PERIOD)) clkg (
     .clk    (clk)
 );
 
-approx_32x32 mult (
-    .a          (a),
-    .b          (b),
+approx_22x16_signed mult (
+    .a1          (a),
+    .b1          (b),
     .precise_en (1'b1),
-    .y          (y)
+    .product          (y)
 );
 
 initial begin
 
     mcd = $fopen("values_approx.csv", "w"); // opening the file
 
-    a = 0;
-    b = 0;
+    a = -2;
+    b = -2;
 end
 
 always @ (posedge clk) begin
@@ -42,7 +43,7 @@ always @ (posedge clk) begin
 
     $fdisplay(mcd, "%d, %d", temp_mult, y);
     
-    if (a == 2**8-1 && b == 2**8-1) begin
+    if (a == 2) begin
         $display("Number of wrong outputs : %d, Number of correct outputs : %d", counter_wrong, counter_correct);
         $fclose(mcd);
         $finish;

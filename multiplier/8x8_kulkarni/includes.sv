@@ -9,3 +9,4 @@
  `include "approx_16x16.sv"
  `include "precise_16x16.sv"
  `include "approx_32x32.sv"
+ `include "approx_22x16_signed.sv"

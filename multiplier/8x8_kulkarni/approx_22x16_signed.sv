@@ -1,8 +1,4 @@
 module approx_22x16_signed (
-    input wire clk,
-    input wire clk_en,
-    input wire rst,
-    
     output logic signed [37:0] product,
 
     input logic signed [15:0] a1,
@@ -12,10 +8,10 @@ module approx_22x16_signed (
 );
 
 logic [31:0] temp_y1, temp_y2, temp_y3, temp_y4;
+logic [46:0] cout;
 logic [15:0] a;
 logic [21:0] b;
 logic [37:0] y;
-logic [46:0] cout;
 
 logic multiplier_sign;
 logic multiplicand_sign;
@@ -81,8 +77,9 @@ approx_16x16  mult_1 (
 //assign {cout[24], y[40]}  = precise_en ? temp_y2[24] + temp_y3[24] + temp_y4[8]  + cout[23] : temp_y2[24] | temp_y3[24] | temp_y4[8] ;
 //assign {cout[23], y[39]}  = precise_en ? temp_y2[23] + temp_y3[23] + temp_y4[7]  + cout[22] : temp_y2[23] | temp_y3[23] | temp_y4[7] ;
 //assign {cout[22], y[38]}  = precise_en ? temp_y2[22] + temp_y3[22] + temp_y4[6]  + cout[21] : temp_y2[22] | temp_y3[22] | temp_y4[6] ;
+//assign {cout[21], y[37]}  = precise_en ? temp_y2[21] + temp_y3[21] + temp_y4[5]  + cout[20] : temp_y2[21] | temp_y3[21] | temp_y4[5] ;
 
-assign y[37]  = product_sign ;
+assign y[37] = product_sign;
 
 assign {cout[20], y[36]}  = precise_en ? temp_y2[20] + temp_y3[20] + temp_y4[4]  + cout[19] : temp_y2[20] | temp_y3[20] | temp_y4[4] ;
 assign {cout[19], y[35]}  = precise_en ? temp_y2[19] + temp_y3[19] + temp_y4[3]  + cout[18] : temp_y2[19] | temp_y3[19] | temp_y4[3] ;
@@ -124,10 +121,10 @@ assign y[2]  = temp_y1[2];
 assign y[1]  = temp_y1[1];
 assign y[0]  = temp_y1[0];
 
-always @(posedge clk)
-    if (~rst) product <= 38'b0;
-    //else if (clk_en) product <= {y[63:38], product_sign, y[36:0]};  //37th bit should be signed bit
-    else if (clk_en) product <= product_sign ? {y[37], ~y[36:0] + 38'b1} : y;  //37th bit should be signed bit
-    else product <= product;
-endmodule
+assign product = product_sign ? {y[37], ~y[36:0] + 38'b1} : y; 
 
+always_comb begin
+    $display("check y = %d, temp_y1 %d, temp_y3 %d, a %d, b %d", y, temp_y1, temp_y3, a, b);
+end
+
+endmodule
